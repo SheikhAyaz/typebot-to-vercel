@@ -8,8 +8,8 @@
     "apps/*"
   ],
   "scripts": {
-    "docker:up": "docker compose -f docker-compose.dev.yml up -d",
-    "docker:nuke": "docker compose -f docker-compose.dev.yml down --volumes --remove-orphans",
+    "docker:up": "docker-compose -f docker-compose.dev.yml up -d",
+    "docker:nuke": "docker-compose -f docker-compose.dev.yml down --volumes --remove-orphans",
     "dev:prepare": "turbo run build --scope=bot-engine --no-deps --include-dependencies && turbo run build --scope=typebot-js --no-deps",
     "dev": "pnpm docker:up && pnpm dev:prepare && NEXT_PUBLIC_E2E_TEST=false turbo run dx --parallel",
     "dev:mocking": "pnpm docker:up && NEXT_PUBLIC_E2E_TEST=true turbo run dx --parallel",
