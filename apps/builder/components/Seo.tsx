@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 export const Seo = ({
   title,
-  currentUrl = 'https://localhost.3000',
+  currentUrl = 'https://typebot-builder-to-vercel-ferila6vg-alihassan4198-tech.vercel.app',
   description = 'Create and publish conversational forms that collect 4 times more answers and feel native to your product',
   imagePreviewUrl = '',
 }: {
