@@ -56,7 +56,7 @@ export const DashboardHeader = () => {
           href="/typebots"
           data-testid="authenticated"
         >
-          <TypebotLogo w="30px" />
+          <TypebotLogo w="150px" />
         </NextChakraLink>
         <HStack>
           {user && workspace && (

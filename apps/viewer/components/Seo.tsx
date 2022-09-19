@@ -16,11 +16,7 @@ export const SEO = ({
   <Head>
     <title>{title ?? typebotName}</title>
     <meta name="robots" content="noindex" />
-    <link
-      rel="icon"
-      type="image/png"
-      href={favIconUrl ?? 'https://bot.typebot.io/favicon.png'}
-    />
+    <link rel="icon" type="image/png" href={favIconUrl ?? '/favicon.png'} />
     <meta name="title" content={title ?? typebotName} />
     <meta
       name="description"
@@ -31,7 +27,7 @@ export const SEO = ({
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url ?? 'https://bot.typebot.io'} />
+    <meta property="og:url" content={url ?? ''} />
     <meta property="og:title" content={title ?? typebotName} />
     <meta property="og:site_name" content={title ?? typebotName} />
     <meta
@@ -41,14 +37,10 @@ export const SEO = ({
         'Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form.'
       }
     />
-    <meta
-      property="og:image"
-      itemProp="image"
-      content={imageUrl ?? 'https://bot.typebot.io/site-preview.png'}
-    />
+    <meta property="og:image" itemProp="image" content={imageUrl ?? ''} />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={url ?? 'https://bot.typebot.io'} />
+    <meta property="twitter:url" content={url ?? ''} />
     <meta property="twitter:title" content={title ?? typebotName} />
     <meta
       property="twitter:description"
@@ -57,9 +49,6 @@ export const SEO = ({
         'Build beautiful conversational forms and embed them directly in your applications without a line of code. Triple your response rate and collect answers that has more value compared to a traditional form.'
       }
     />
-    <meta
-      property="twitter:image"
-      content={imageUrl ?? 'https://bot.typebot.io/site-preview.png'}
-    />
+    <meta property="twitter:image" content={imageUrl ?? ''} />
   </Head>
 )

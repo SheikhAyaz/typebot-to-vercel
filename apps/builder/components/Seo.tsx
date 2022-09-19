@@ -2,9 +2,9 @@ import Head from 'next/head'
 
 export const Seo = ({
   title,
-  currentUrl = 'https://app.typebot.io',
+  currentUrl = 'https://localhost.3000',
   description = 'Create and publish conversational forms that collect 4 times more answers and feel native to your product',
-  imagePreviewUrl = 'https://app.typebot.io/site-preview.png',
+  imagePreviewUrl = '',
 }: {
   title: string
   description?: string
@@ -12,7 +12,7 @@ export const Seo = ({
   imagePreviewUrl?: string
 }) => (
   <Head>
-    <title>Typebot | {title}</title>
+    <title>VKYC | {title}</title>
     <meta name="title" content={title} />
     <meta property="og:title" content={title} />
     <meta property="twitter:title" content={title} />
