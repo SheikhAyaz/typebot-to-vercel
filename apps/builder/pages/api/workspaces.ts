@@ -22,7 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       data: {
         ...data,
         members: { create: [{ role: 'ADMIN', userId: user.id }] },
-        plan: process.env.ADMIN_EMAIL === user.email ? 'TEAM' : 'FREE',
+        plan: process.env.ADMIN_EMAIL === user.email ? 'TEAM' : 'PRO',
       },
     })
     return res.status(200).json({
