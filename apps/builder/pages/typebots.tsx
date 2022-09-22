@@ -19,15 +19,15 @@ const DashboardPage = () => {
   useEffect(() => {
     const subscribePlan = query.subscribePlan as 'pro' | 'team' | undefined
     if (workspace && subscribePlan && user && workspace.plan === 'FREE') {
-      setIsLoading(true)
-      pay({
-        user,
-        plan: subscribePlan,
-        workspaceId: workspace.id,
-        currency: navigator.languages.find((l) => l.includes('fr'))
-          ? 'eur'
-          : 'usd',
-      })
+      // setIsLoading(true)
+      // pay({
+      //   user,
+      //   plan: subscribePlan,
+      //   workspaceId: workspace.id,
+      //   currency: navigator.languages.find((l) => l.includes('fr'))
+      //     ? 'eur'
+      //     : 'usd',
+      // })
     }
   }, [query, user, workspace])
 
@@ -53,11 +53,11 @@ export async function getServerSideProps(context: NextPageContext) {
   const redirectPath = context.query.redirectPath?.toString()
   return redirectPath
     ? {
-        redirect: {
-          permanent: false,
-          destination: redirectPath,
-        },
-      }
+      redirect: {
+        permanent: false,
+        destination: redirectPath,
+      },
+    }
     : { props: {} }
 }
 

@@ -80,14 +80,14 @@ export const MembersList = () => {
 
   return (
     <Stack w="full">
-      {workspace?.plan !== Plan.TEAM && (
+      {/* {workspace?.plan !== Plan.TEAM && (
         <UnlockPlanInfo
           contentLabel={
             'Upgrade to team plan for a collaborative workspace, unlimited team members, and advanced permissions.'
           }
           plan={Plan.TEAM}
         />
-      )}
+      )} */}
       {workspace?.id && canEdit && (
         <AddMemberForm
           workspaceId={workspace.id}

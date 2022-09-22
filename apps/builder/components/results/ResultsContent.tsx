@@ -46,13 +46,13 @@ export const ResultsContent = () => {
       overflow="scroll"
       w="full"
     >
-      {totalHiddenResults && (
+      {/* {totalHiddenResults && (
         <UnlockPlanInfo
           buttonLabel={`Unlock ${totalHiddenResults} results`}
           contentLabel="You are seeing complete submissions only."
           plan={Plan.PRO}
         />
-      )}
+      )} */}
       {publishedTypebot && (
         <LogsModal
           typebotId={publishedTypebot?.typebotId}
