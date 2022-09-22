@@ -76,7 +76,7 @@ export const TypebotButton = ({
     if (!typebotToDuplicate) return { error: new Error('Typebot not found') }
     const { data: createdTypebot, error } = await importTypebot(
       data.typebot,
-      workspace?.plan ?? Plan.FREE
+      workspace?.plan ?? Plan.PRO
     )
     if (error)
       return showToast({
