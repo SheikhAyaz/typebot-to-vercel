@@ -59,7 +59,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
               stripeId: subscription.customer as string,
             },
             data: {
-              plan: Plan.FREE,
+              plan: Plan.PRO,
             },
           })
           return res.send({ message: 'workspace downgraded in DB' })

@@ -45,21 +45,21 @@ export function CustomAdapter(p: PrismaClient): Adapter {
             workspaceInvitations.length > 0
               ? undefined
               : {
-                  create: {
-                    role: WorkspaceRole.ADMIN,
-                    workspace: {
-                      create: {
-                        name: data.name
-                          ? `${data.name}'s workspace`
-                          : `My workspace`,
-                        plan:
-                          process.env.ADMIN_EMAIL === data.email
-                            ? Plan.TEAM
-                            : Plan.FREE,
-                      },
+                create: {
+                  role: WorkspaceRole.ADMIN,
+                  workspace: {
+                    create: {
+                      name: data.name
+                        ? `${data.name}'s workspace`
+                        : `My workspace`,
+                      plan:
+                        process.env.ADMIN_EMAIL === data.email
+                          ? Plan.TEAM
+                          : Plan.PRO,
                     },
                   },
                 },
+              },
         },
       })
       if (process.env.USER_CREATED_WEBHOOK_URL)
