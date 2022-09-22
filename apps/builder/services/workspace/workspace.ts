@@ -29,6 +29,7 @@ export const createNewWorkspace = async (
     body,
   })
 
+
 export const updateWorkspace = async (updates: Partial<Workspace>) =>
   sendRequest<{
     workspace: Workspace
@@ -37,6 +38,7 @@ export const updateWorkspace = async (updates: Partial<Workspace>) =>
     method: 'PATCH',
     body: updates,
   })
+
 
 export const deleteWorkspace = (workspaceId: string) =>
   sendRequest<{
