@@ -15,7 +15,7 @@ export const BillingForm = () => {
         <Text>Current workspace subscription: </Text>
         <PlanTag plan={workspace?.plan} />
       </HStack>
-      {workspace &&
+      {/* {workspace &&
         !([Plan.TEAM, Plan.LIFETIME, Plan.OFFERED] as Plan[]).includes(
           workspace.plan
         ) && (
@@ -36,8 +36,8 @@ export const BillingForm = () => {
               </UpgradeButton>
             )}
           </HStack>
-        )}
-      {workspace?.stripeId && (
+        )} */}
+      {/* {workspace?.stripeId && (
         <>
           <Text>
             To manage your subscription and download invoices, head over to your
@@ -54,7 +54,7 @@ export const BillingForm = () => {
             Stripe Portal
           </Button>
         </>
-      )}
+      )} */}
     </Stack>
   )
 }

@@ -39,7 +39,7 @@ CREATE TABLE "User" (
     "email" TEXT,
     "emailVerified" TIMESTAMP(3),
     "image" TEXT,
-    "plan" "Plan" NOT NULL DEFAULT E'FREE',
+    "plan" "Plan" NOT NULL DEFAULT E'PRO',
     "stripeId" TEXT,
 
     CONSTRAINT "User_pkey" PRIMARY KEY ("id")

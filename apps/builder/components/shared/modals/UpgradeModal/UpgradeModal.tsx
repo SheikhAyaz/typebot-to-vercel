@@ -87,11 +87,11 @@ export const UpgradeModal = ({
       <ModalOverlay />
       <ModalContent>
         <ModalBody as={Stack} pt="10">
-          {plan === Plan.PRO ? (
+          {/* {plan === Plan.PRO ? (
             <PersonalProPlanContent currency={currency} type={type} />
           ) : (
             <TeamPlanContent currency={currency} type={type} />
-          )}
+          )} */}
         </ModalBody>
 
         <ModalFooter>
@@ -99,13 +99,13 @@ export const UpgradeModal = ({
             <Button colorScheme="gray" onClick={onClose}>
               Cancel
             </Button>
-            <Button
+            {/* <Button
               onClick={handlePayClick}
               isLoading={payLoading}
               colorScheme="blue"
             >
               Upgrade
-            </Button>
+            </Button> */}
           </HStack>
         </ModalFooter>
       </ModalContent>

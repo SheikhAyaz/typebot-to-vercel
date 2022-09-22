@@ -32,7 +32,7 @@ CREATE TABLE "Workspace" (
     "name" TEXT NOT NULL,
     "icon" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "plan" "Plan" NOT NULL DEFAULT E'FREE',
+    "plan" "Plan" NOT NULL DEFAULT E'PRO',
     "stripeId" TEXT,
 
     CONSTRAINT "Workspace_pkey" PRIMARY KEY ("id")
