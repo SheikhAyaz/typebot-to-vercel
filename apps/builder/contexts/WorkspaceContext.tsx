@@ -62,10 +62,10 @@ export const WorkspaceContext = ({ children }: { children: ReactNode }) => {
     const defaultWorkspace = lastWorspaceId
       ? workspaces.find(byId(lastWorspaceId))
       : workspaces.find((w) =>
-          w.members.some(
-            (m) => m.userId === userId && m.role === WorkspaceRole.ADMIN
-          )
+        w.members.some(
+          (m) => m.userId === userId && m.role === WorkspaceRole.ADMIN
         )
+      )
     setCurrentWorkspace(defaultWorkspace ?? workspaces[0])
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [workspaces?.length])
@@ -97,7 +97,7 @@ export const WorkspaceContext = ({ children }: { children: ReactNode }) => {
     if (!workspaces) return
     const { data, error } = await createNewWorkspace({
       name: name ? `${name}'s workspace` : 'My workspace',
-      plan: Plan.FREE,
+      plan: Plan.PRO,
     })
     if (error || !data) return
     const { workspace } = data
