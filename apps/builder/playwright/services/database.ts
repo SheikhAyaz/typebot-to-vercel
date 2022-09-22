@@ -99,18 +99,18 @@ export const createUsers = async () => {
   })
   await prisma.user.create({
     data: {
-      id: 'freeUser',
-      email: 'free-user@email.com',
-      name: 'Free user',
+      id: 'proUser',
+      email: 'pro-user@email.com',
+      name: 'Pro user',
       graphNavigation: GraphNavigation.TRACKPAD,
       workspaces: {
         create: {
           role: WorkspaceRole.ADMIN,
           workspace: {
             create: {
-              id: 'free',
-              name: "Free user's workspace",
-              plan: Plan.FREE,
+              id: 'pro',
+              name: "Pro user's workspace",
+              plan: Plan.PRO,
             },
           },
         },
@@ -120,8 +120,8 @@ export const createUsers = async () => {
   await prisma.workspace.create({
     data: {
       id: freeWorkspaceId,
-      name: 'Free Shared workspace',
-      plan: Plan.FREE,
+      name: 'Pro Shared workspace',
+      plan: Plan.PRO,
       members: {
         createMany: {
           data: [
@@ -155,7 +155,7 @@ export const createWebhook = async (
 ) => {
   try {
     await prisma.webhook.delete({ where: { id: 'webhook1' } })
-  } catch {}
+  } catch { }
   return prisma.webhook.create({
     data: { method: 'GET', typebotId, id: 'webhook1', ...webhookProps },
   })
